@@ -96,7 +96,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		to_chat(user, "DEBUG: Species '[pref.species]' not found in all_species!")
 		return
 	if (!length(all_species))
-		to_chat(user, "DEBUG: all_species is empty!")
+	to_chat(user, "DEBUG: all_species is empty!")
 		return
 	speciesstring = "<b>Species:</b> <a href='?src=\ref[src];select_species=[cspecies.name]'>[cspecies.name]</a>"
 	. += speciesstring
