@@ -90,12 +90,17 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	. += "<table><tr style='vertical-align:top; width: 100%'><td width=65%><b>Body</b> "
 	. += "(<a href='?src=\ref[src];random=1'>&reg;</A>)"
 	. += "<br>"
+	var/speciesstring
+	var/datum/species/cspecies = global.all_species[pref.species]
+	speciesstring = "<b>Species:</b> <a href='?src=\ref[src];select_species=[cspecies.name]'>[cspecies.name]</a>"
+	. += speciesstring
+	. += "<br>"
 
 	. += "Blood Type: <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
 
 	. += "Base Colour: <a href='?src=\ref[src];base_skin=1'>[pref.s_base]</a><br>"
 
-	. += "Skin Tone: <a href='?src=\ref[src];skin_tone=1'>[-pref.s_tone + 35]/220</a><br>"
+	. += "Skin Tone: <a href='?src=\ref[src];skin_tone=1'>[pref.s_tone + 35]/220</a><br>"
 
 	. += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br><br>"
 
