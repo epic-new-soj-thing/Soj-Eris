@@ -21,7 +21,7 @@
 
 //Soj-Eris (Iskod) Species
 
-/datum/species/exalt
+/datum/species/human/exalt
 	name = SPECIES_EXALT_HUMAN
 	name_plural = "Exalt Humans"
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
@@ -42,5 +42,5 @@
 	spawn_flags = CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 
-/datum/species/exalt/get_bodytype()
+/datum/species/human/exalt/get_bodytype()
 	return SPECIES_EXALT_HUMAN
