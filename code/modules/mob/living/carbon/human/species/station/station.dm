@@ -42,5 +42,5 @@
 	spawn_flags = CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 
-/datum/species/human/get_bodytype()
-	return SPECIES_HUMAN
+/datum/species/exalt/get_bodytype()
+	return SPECIES_EXALT_HUMAN
