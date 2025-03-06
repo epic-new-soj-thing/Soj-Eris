@@ -1962,6 +1962,7 @@
 #include "code\modules\mob\living\carbon\human\species\species_attack.dm"
 #include "code\modules\mob\living\carbon\human\species\species_hud.dm"
 #include "code\modules\mob\living\carbon\human\species\station\golem.dm"
+#include "code\modules\mob\living\carbon\human\species\station\kriosan.dm"
 #include "code\modules\mob\living\carbon\human\species\station\marqua.dm"
 #include "code\modules\mob\living\carbon\human\species\station\monkey.dm"
 #include "code\modules\mob\living\carbon\human\species\station\sablekyne.dm"

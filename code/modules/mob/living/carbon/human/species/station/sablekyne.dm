@@ -24,9 +24,9 @@
 	cold_level_2 = 190 //Default 230
 	cold_level_3 = 160  //Default 200
 
-	heat_level_1 = 330 //Default 330
-	heat_level_2 = 380 //Default 380
-	heat_level_3 = 460 //Default 460
+	heat_level_1 = 325 //Default 330
+	heat_level_2 = 375 //Default 380
+	heat_level_3 = 455 //Default 460
 
 	spawn_flags = CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
