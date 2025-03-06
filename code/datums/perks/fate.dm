@@ -444,8 +444,6 @@
 /datum/perk/racial/sablekyne/assign(mob/living/carbon/human/H)
 	if(..())
 		add_verb(holder, sablekyne_perks)
-		log_and_message_admins("DEBUG, [src] has successfully loaded a racial perk!")
-
 
 /datum/perk/racial/sablekyne/remove() 
 	if(holder)

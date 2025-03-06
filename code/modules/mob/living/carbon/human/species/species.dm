@@ -418,10 +418,8 @@
 /datum/species/proc/add_stats(var/mob/living/carbon/human/H)
 	for(var/name in stat_modifiers)
 		H.stats.changeStat(name, stat_modifiers[name])
-		log_and_message_admins("DEBUG, [src] has initiated the stat modifiers proc for stat [name]!")
 	for(var/perk in perks)
 		H.stats.addPerk(perk)
-		log_and_message_admins("DEBUG, [src] has initiated the perk addition proc!)!")
 	if(H.species.reagent_tag == IS_CHTMANT)
 		H.faction = "roach"
 		H.add_language(LANGUAGE_CHTMANT)

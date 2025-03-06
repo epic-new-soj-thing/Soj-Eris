@@ -46,7 +46,7 @@
 
 	injury_type =  INJURY_TYPE_UNLIVING
 
-	perks = (PERK_RACIAL_OPIFEX)
+	perks = list(PERK_RACIAL_HUMAN)
 
 	has_process = list()
 
