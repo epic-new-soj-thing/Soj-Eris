@@ -71,6 +71,7 @@
 
 	for(var/perk in perks)
 		target.stats.addPerk(perk)
+		log_and_message_admins("JOB: addPerk has been activated! Target: [target], Perk: [perk]")
 
 	return TRUE
 

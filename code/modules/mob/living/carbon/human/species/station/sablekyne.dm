@@ -31,10 +31,10 @@
 	spawn_flags = CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 
-	perks = (PERK_RACIAL_SABLEKYNE)
+	perks = list(PERK_RACIAL_SABLEKYNE)
 
 	stat_modifiers = list(
-		STAT_TGH = 10,
+		STAT_TGH = 17,
 		STAT_ROB = 5
 	)
 

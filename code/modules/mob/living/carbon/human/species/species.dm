@@ -418,9 +418,11 @@
 /datum/species/proc/add_stats(var/mob/living/carbon/human/H)
 	for(var/name in stat_modifiers)
 		H.stats.changeStat(name, stat_modifiers[name])
-	for(var/perks in perks)
-		H.stats.addPerk(PERK_RACIAL_HUMAN)
-	/*if(H.species.reagent_tag == IS_CHTMANT)
+		log_and_message_admins("DEBUG, [src] has initiated the stat modifiers proc for stat [name]!")
+	for(var/perk in perks)
+		H.stats.addPerk(perk)
+		log_and_message_admins("DEBUG, [src] has initiated the perk addition proc!)!")
+	if(H.species.reagent_tag == IS_CHTMANT)
 		H.faction = "roach"
 		H.add_language(LANGUAGE_CHTMANT)
 	if(H.species.reagent_tag == IS_OPIFEX)
@@ -435,4 +437,5 @@
 		H.add_language(LANGUAGE_SYNTHETIC)
 	if(H.species.reagent_tag == IS_NARAMAD)
 		H.add_language(LANGUAGE_MERP)
-	return TRUE*/
+	if(H.species.reagent_tag == IS_CINDARITE)
+		H.add_language(LANGUAGE_WEH)

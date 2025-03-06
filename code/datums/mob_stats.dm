@@ -134,6 +134,7 @@
 /datum/stat_holder/proc/addPerk(perkType)
 	. = FALSE
 	if(!getPerk(perkType))
+		log_and_message_admins("DEBUG/JOB: addPerk has been activated for perk (PERKTYPE: [perkType])")
 		var/datum/perk/P = new perkType
 		perks += P
 		P.assign(holder)

@@ -382,6 +382,7 @@
 	if(!new_character)
 		new_character = new(loc)
 	if(chosen_species)
+		log_and_message_admins("DEBUG, [src] has chosen a species ([chosen_species])!")
 		chosen_species.add_stats(new_character)
 
 	new_character.lastarea = get_area(loc)
