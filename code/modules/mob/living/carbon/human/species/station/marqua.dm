@@ -32,8 +32,7 @@
 
 	stat_modifiers = list(
 		STAT_COG = 15,
-		STAT_BIO = 5
-	)
+		STAT_BIO = 5)
 
 /datum/species/marqua/get_bodytype()
 	return SPECIES_MARQUA
