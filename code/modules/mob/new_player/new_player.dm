@@ -375,17 +375,17 @@
 
 	if(chosen_species && use_species_name)
 		// Have to recheck admin due to no usr at roundstart. Latejoins are fine though.
-		if(is_species_whitelisted(chosen_species) || has_admin_rights())
-			new_character = new(NULLSPACE, use_species_name)
+		if(!is_species_whitelisted(chosen_species) && !has_admin_rights())
+			use_species_name = null
+		new_character = new(loc, use_species_name)
 
 	if(!new_character)
-		new_character = new(NULLSPACE)
-
-	new_character.lastarea = get_area(NULLSPACE)
-
+		new_character = new(loc)
 	if(chosen_species)
 		chosen_species.add_stats(new_character)
-		
+
+	new_character.lastarea = get_area(loc)
+
 	for(var/lang in client.prefs.alternate_languages)
 		var/datum/language/chosen_language = all_languages[lang]
 		if(chosen_language)
