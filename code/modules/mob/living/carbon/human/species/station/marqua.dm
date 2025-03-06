@@ -26,7 +26,7 @@
 	heat_level_3 = 460 //Default 460
 
 	spawn_flags = CAN_JOIN
-	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_UNDERWEAR
+	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_SKIN_COLOR | HAS_UNDERWEAR
 
 	perks = list(PERK_RACIAL_MARQUA)
 
