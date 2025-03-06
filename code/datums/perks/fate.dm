@@ -322,7 +322,7 @@
 		remove_verb(holder, human_perks)
 	..()
 
-/mob/living/carbon/human/proc/willtosurvive() //The proc itself, this is where the action to the body is applied, aswell as where cooldowns are handled.
+/mob/living/carbon/human/proc/willtosurvive() //The proc itself, this is where the action to the mob is applied, aswell as where cooldowns are handled.
 	set category = "Human Perks"
 	set name = "Indomitable Spirit"
 	var/mob/living/carbon/human/user = usr
@@ -453,8 +453,8 @@
 /mob/living/carbon/human/proc/laststand()
 	var/mob/living/carbon/human/user = usr
 	set category = "Sablekyne Perks"
-	set name = "Last Stand"
-	var/perk_id = "laststand"
+	set name = "Numbed Nerves"
+	var/perk_id = "numbnerves"
 	var/cooldown_end = perk_cooldown_list[perk_id] || 0
 	if(!istype(user))
 		return 

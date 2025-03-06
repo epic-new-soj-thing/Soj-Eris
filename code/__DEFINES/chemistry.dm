@@ -34,6 +34,19 @@
 #define REAGENTS_MIN_EFFECT_MULTIPLIER 0.2
 #define REAGENTS_MAX_EFFECT_MULTIPLIER 2.5
 
+//Species chemflags
+#define IS_XENOS   1
+#define IS_CHTMANT 2
+#define IS_SYNTHETIC 3
+#define IS_SLIME 4
+#define IS_MARQUA 5
+#define IS_KRIOSAN 6
+#define IS_AKULA 7
+#define IS_TREE 8
+#define IS_OPIFEX 9
+#define IS_NARAMAD 10
+#define IS_CINDARITE 11
+
 #define CHEM_SYNTH_ENERGY 3000 // How much energy does it take to synthesize 1 unit of chemical, in Joules.
 
 #define CE_STABLE			"stabilization"		// Inaprovaline

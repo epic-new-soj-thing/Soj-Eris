@@ -383,6 +383,9 @@
 
 	new_character.lastarea = get_area(NULLSPACE)
 
+	if(chosen_species)
+		chosen_species.add_stats(new_character)
+		
 	for(var/lang in client.prefs.alternate_languages)
 		var/datum/language/chosen_language = all_languages[lang]
 		if(chosen_language)

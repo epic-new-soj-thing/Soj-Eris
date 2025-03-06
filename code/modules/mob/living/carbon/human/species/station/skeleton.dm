@@ -46,7 +46,14 @@
 
 	injury_type =  INJURY_TYPE_UNLIVING
 
+	perks = (PERK_RACIAL_OPIFEX)
+
 	has_process = list()
+
+	stat_modifiers = list(
+		STAT_BIO = 69,
+		STAT_COG = 20
+	)
 
 	has_limbs = list(
 		BP_CHEST =  new /datum/organ_description/chest/skeletal,
