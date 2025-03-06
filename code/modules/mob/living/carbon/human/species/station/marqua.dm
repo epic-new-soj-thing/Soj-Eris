@@ -9,21 +9,21 @@
 
 	num_alternate_languages = 2
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
-	min_age = 17
-	max_age = 110
+	min_age = 18
+	max_age = 185
 	remains_type = /obj/item/remains/human
 
-	darksight = 4 
+	darksight = 4 // Complex mono-eye!
 
 	base_color = "#5f92c2"
 
-	cold_level_1 = 285 //Default 270
-	cold_level_2 = 245 //Default 230
+	cold_level_1 = 285  //Default 270
+	cold_level_2 = 245  //Default 230
 	cold_level_3 = 215  //Default 200
 
-	heat_level_1 = 330 //Default 330
-	heat_level_2 = 380 //Default 380
-	heat_level_3 = 460 //Default 460
+	heat_level_1 = 330  //Default 330
+	heat_level_2 = 380  //Default 380
+	heat_level_3 = 460  //Default 460
 
 	spawn_flags = CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_SKIN_COLOR | HAS_UNDERWEAR

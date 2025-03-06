@@ -1,19 +1,20 @@
-/datum/species/kriosan
-	name = SPECIES_KRIOSAN
-	name_plural = "Kriosans"
-	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/bite)
+/datum/species/akula
+	name = SPECIES_AKULA
+	name_plural = "Akuli"
+	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/bite, /datum/unarmed_attack/punch)
 	//blurb = "" - TODO
 
-	icobase = 'icons/mob/human_races/r_vulpkanin.dmi'
+	icobase = 'icons/mob/human_races/r_sergal.dmi'
 	//deform = 'icons/mob/human_races/r_def_sablekyne.dmi'
 
 	num_alternate_languages = 2
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
 	min_age = 18
-	max_age = 90
+	max_age = 70
 	remains_type = /obj/item/remains/human
 
-	darksight = 3
+	darksight = 2
+	bump_flag = HEAVY
 
 	cold_level_1 = 220 //Default 270
 	cold_level_2 = 190 //Default 230
@@ -30,8 +31,7 @@
 
 	stat_modifiers = list(
 		STAT_TGH = 5,
-		STAT_ROB = 5,
-        STAT_VIG = 5)
+		STAT_ROB = 10)
 
 /datum/species/kriosan/get_bodytype()
 	return SPECIES_KRIOSAN

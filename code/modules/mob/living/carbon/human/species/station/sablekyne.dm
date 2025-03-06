@@ -13,11 +13,11 @@
 
 	num_alternate_languages = 2
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
-	min_age = 17
-	max_age = 110
+	min_age = 18
+	max_age = 80
 	remains_type = /obj/item/remains/human
 
-	darksight = 8
+	darksight = 8 //Cat eyes.
 	bump_flag = HEAVY
 
 	cold_level_1 = 220 //Default 270
