@@ -5,7 +5,7 @@
 	//blurb = "Mar'Qua"
 
 	icobase = 'icons/mob/human_races/r_marqua.dmi'
-	deform = 'icons/mob/human_races/r_def_skrell.dmi'
+	//deform = 'icons/mob/human_races/r_def_skrell_white.dmi'
 
 	num_alternate_languages = 2
 	name_language = null // Use the first-name last-name generator rather than a language scrambler

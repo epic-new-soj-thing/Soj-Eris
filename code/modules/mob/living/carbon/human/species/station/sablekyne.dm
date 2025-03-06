@@ -9,7 +9,7 @@
 	worlds tumultous at best."
 
 	icobase = 'icons/mob/human_races/r_sablekyne.dmi'
-	deform = 'icons/mob/human_races/r_def_sablekyne.dmi'
+	//deform = 'icons/mob/human_races/r_def_sablekyne.dmi'
 
 	num_alternate_languages = 2
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
