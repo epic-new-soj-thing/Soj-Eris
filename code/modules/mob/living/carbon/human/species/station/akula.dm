@@ -16,13 +16,13 @@
 	darksight = 2
 	bump_flag = HEAVY
 
-	cold_level_1 = 220 //Default 270
-	cold_level_2 = 190 //Default 230
-	cold_level_3 = 160  //Default 200
+	cold_level_1 = 270 //Default 270
+	cold_level_2 = 240 //Default 230
+	cold_level_3 = 210  //Default 200
 
-	heat_level_1 = 330 //Default 330
+	heat_level_1 = 340 //Default 330
 	heat_level_2 = 380 //Default 380
-	heat_level_3 = 460 //Default 460
+	heat_level_3 = 470 //Default 460
 
 	spawn_flags = CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
