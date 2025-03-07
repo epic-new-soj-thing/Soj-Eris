@@ -221,7 +221,7 @@
 #define SPECIES_KRIOSAN  		"Kriosan"
 #define SPECIES_AKULA			"Akula"
 #define SPECIES_CHTMANT			"Cht'mant"
-#define SPECIES_CINDAR			"Cindarite"
+#define SPECIES_CINDARITE		"Cindarite"
 #define SPECIES_OPIFEX			"Opifex"
 #define SPECIES_FBP				"Full Body Prosthetic"
 #define SPECIES_UNBRANDED		"Unbranded Full Body Prosthetic"

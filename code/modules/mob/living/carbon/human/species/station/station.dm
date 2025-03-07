@@ -16,6 +16,8 @@
 	spawn_flags = CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 
+	perks = list(PERK_RACIAL_HUMAN)
+
 /datum/species/human/get_bodytype()
 	return SPECIES_HUMAN
 
@@ -37,7 +39,7 @@
 	max_age = 110
 	remains_type = /obj/item/remains/human
 
-	//perks = ()
+	//perks = list()
 
 	spawn_flags = CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR

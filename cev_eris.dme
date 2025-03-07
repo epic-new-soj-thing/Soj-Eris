@@ -1961,6 +1961,8 @@
 #include "code\modules\mob\living\carbon\human\species\species.dm"
 #include "code\modules\mob\living\carbon\human\species\species_attack.dm"
 #include "code\modules\mob\living\carbon\human\species\species_hud.dm"
+#include "code\modules\mob\living\carbon\human\species\station\akula.dm"
+#include "code\modules\mob\living\carbon\human\species\station\cindarite.dm"
 #include "code\modules\mob\living\carbon\human\species\station\golem.dm"
 #include "code\modules\mob\living\carbon\human\species\station\kriosan.dm"
 #include "code\modules\mob\living\carbon\human\species\station\marqua.dm"

@@ -5,7 +5,7 @@
 	//blurb = "" - TODO
 
 	icobase = 'icons/mob/human_races/r_sergal.dmi'
-	//deform = 'icons/mob/human_races/r_def_sablekyne.dmi'
+	//deform = 'icons/mob/human_races/r_def_sergal.dmi'
 
 	num_alternate_languages = 2
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
@@ -27,11 +27,11 @@
 	spawn_flags = CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 
-	perks = list(PERK_RACIAL_KRIOSAN)
+	perks = list(PERK_RACIAL_AKULA)
 
 	stat_modifiers = list(
 		STAT_TGH = 5,
 		STAT_ROB = 10)
 
-/datum/species/kriosan/get_bodytype()
-	return SPECIES_KRIOSAN
+/datum/species/akula/get_bodytype()
+	return SPECIES_AKULA

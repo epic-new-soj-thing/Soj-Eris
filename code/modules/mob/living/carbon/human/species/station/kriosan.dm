@@ -5,7 +5,7 @@
 	//blurb = "" - TODO
 
 	icobase = 'icons/mob/human_races/r_vulpkanin.dmi'
-	//deform = 'icons/mob/human_races/r_def_sablekyne.dmi'
+	//deform = 'icons/mob/human_races/r_def_vulpkanin.dmi'
 
 	num_alternate_languages = 2
 	name_language = null // Use the first-name last-name generator rather than a language scrambler

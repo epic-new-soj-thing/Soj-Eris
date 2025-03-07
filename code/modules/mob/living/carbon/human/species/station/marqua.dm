@@ -17,7 +17,7 @@
 
 	base_color = "#5f92c2"
 
-	cold_level_1 = 285  //Default 270
+	cold_level_1 = 280  //Default 270
 	cold_level_2 = 245  //Default 230
 	cold_level_3 = 215  //Default 200
 
@@ -32,7 +32,9 @@
 
 	stat_modifiers = list(
 		STAT_COG = 15,
-		STAT_BIO = 5)
+		STAT_BIO = 15,
+		STAT_TGH = -15,
+		STAT_ROB = -5)
 
 /datum/species/marqua/get_bodytype()
 	return SPECIES_MARQUA
