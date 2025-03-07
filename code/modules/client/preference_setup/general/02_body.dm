@@ -67,7 +67,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.skin_color		= iscolor(pref.skin_color) ? pref.skin_color : "#000000"
 	pref.eyes_color		= iscolor(pref.eyes_color) ? pref.eyes_color : "#000000"
 
-	if(!pref.species || !(pref.species in playable_species))
+	if(!pref.species || !(pref.species in playable_species)) //Fallback to human if no other species is dictated in pref.species
 		pref.species = SPECIES_HUMAN
 
 	sanitize_integer(pref.s_tone, -185, 34, initial(pref.s_tone))
@@ -83,19 +83,27 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	if(!pref.preview_icon)
 		pref.update_preview_icon()
 	user << browse_rsc(pref.preview_icon, "previewicon.png")
-
-	var/datum/species/mob_species = all_species[pref.species]
+	//HTML styling
 	. += "<style>span.color_holder_box{display: inline-block; width: 20px; height: 8px; border:1px solid #000; padding: 0px;}</style>"
 	. += "<hr>"
 	. += "<table><tr style='vertical-align:top; width: 100%'><td width=65%><b>Body</b> "
 	. += "(<a href='?src=\ref[src];random=1'>&reg;</A>)"
 	. += "<br>"
 
+	var/speciesstring
+	var/datum/species/cspecies = global.all_species[pref.species]
+	//var/datum/species/cspecies = global.playable_species
+	var/datum/species/mob_species = all_species[pref.species]
+
+	speciesstring = "<b>Species:</b> <a href='?src=\ref[src];select_species=[cspecies.name]'>[cspecies.name]</a>"
+	. += speciesstring
+	. += "<br>"
+
 	. += "Blood Type: <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
 
 	. += "Base Colour: <a href='?src=\ref[src];base_skin=1'>[pref.s_base]</a><br>"
 
-	. += "Skin Tone: <a href='?src=\ref[src];skin_tone=1'>[-pref.s_tone + 35]/220</a><br>"
+	. += "Skin Tone: <a href='?src=\ref[src];skin_tone=1'>[pref.s_tone + 35]/220</a><br>"
 
 	. += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br><br>"
 
@@ -136,6 +144,20 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	if(href_list["toggle_species_verbose"])
 		hide_species = !hide_species
 		return TOPIC_REFRESH
+
+	else if(href_list["select_species"])
+		var/new_species = input(user, "Choose your character's species:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.species) as null|anything in global.playable_species
+		if(new_species && CanUseTopic(user))
+			pref.species = new_species
+		//	pref.ears_style = "Default"
+		//	pref.tail_style = "Default"
+		//	pref.wings_style = "Default"
+			pref.setup_options["Career"] = "None"
+			pref.setup_options["Homeworld"] = "None"
+			pref.setup_options["Upbringing"] = "None"
+			pref.setup_options["Ethnicity"] = "None"
+			pref.setup_options["Core implant"] = "None"
+			return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["random"])
 		pref.randomize_appearance_and_body_for()

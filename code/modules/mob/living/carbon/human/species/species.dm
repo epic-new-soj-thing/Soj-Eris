@@ -157,6 +157,9 @@
 	// Misc
 	var/list/genders = list(MALE, FEMALE)
 
+	var/list/stat_modifiers = list()  //STAT = number - stats for the mob
+	var/list/perks = list()
+
 	// Bump vars
 	var/bump_flag = HUMAN	// What are we considered to be when bumped?
 	var/push_flags = ~HEAVY	// What can we push?
@@ -411,3 +414,26 @@
 		if(!(slot in hud.equip_slots))
 			return FALSE
 	return TRUE
+
+/datum/species/proc/add_stats(var/mob/living/carbon/human/H)
+	for(var/name in stat_modifiers)
+		H.stats.changeStat(name, stat_modifiers[name])
+	for(var/perk in perks)
+		H.stats.addPerk(perk)
+	if(H.species.reagent_tag == IS_CHTMANT)
+		H.faction = "roach"
+		H.add_language(LANGUAGE_CHTMANT)
+	if(H.species.reagent_tag == IS_OPIFEX)
+		H.add_language(LANGUAGE_OPIFEXEE)
+	if(H.species.reagent_tag == IS_KRIOSAN)
+		H.add_language(LANGUAGE_KRIOSAN)
+	if(H.species.reagent_tag == IS_AKULA)
+		H.add_language(LANGUAGE_AKULA)
+	if(H.species.reagent_tag == IS_MARQUA)
+		H.add_language(LANGUAGE_MARQUA)
+	if(H.species.reagent_tag == IS_SYNTHETIC)
+		H.add_language(LANGUAGE_SYNTHETIC)
+	if(H.species.reagent_tag == IS_NARAMAD)
+		H.add_language(LANGUAGE_MERP)
+	if(H.species.reagent_tag == IS_CINDARITE)
+		H.add_language(LANGUAGE_WEH)

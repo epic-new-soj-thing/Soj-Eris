@@ -71,3 +71,4 @@
 #define PERK_RACIAL_AKULA /datum/perk/racial/akula
 #define PERK_RACIAL_NARAMAD /datum/perk/racial/naramad
 #define PERK_RACIAL_OPIFEX /datum/perk/racial/opifex
+#define PERK_RACIAL_CINDARITE /datum/perk/racial/cindarite

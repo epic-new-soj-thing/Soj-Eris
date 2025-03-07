@@ -31,6 +31,18 @@
 #define LANGUAGE_NEOHONGO "Neohongo"
 #define LANGUAGE_LATIN "Latin"
 
+//Alien / Species specific langauges.
+#define LANGUAGE_ROBOT "Robot Talk"
+#define LANGUAGE_OPIFEXEE "Opifexee"
+#define LANGUAGE_CHTMANT "Chthive"
+#define LANGUAGE_KRIOSAN "Kriosan"
+#define LANGUAGE_AKULA "Akula"
+#define LANGUAGE_MARQUA "Marqua"
+#define LANGUAGE_PLANT "Native Plant"
+#define LANGUAGE_SYNTHETIC "Technical Cant"
+#define LANGUAGE_MERP "Narad Pidgin"
+#define LANGUAGE_BLORP "Aulvae Sonet"
+#define LANGUAGE_WEH "Cindarite Voc"
 
 #define LANGUAGE_ROBOT "Robot Talk"
 #define LANGUAGE_DRONE "Drone Talk"

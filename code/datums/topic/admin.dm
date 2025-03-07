@@ -239,6 +239,8 @@
 			M.change_mob_type( /mob/observer/eye/angel , null, null, delmob )
 		if("human")
 			M.change_mob_type( /mob/living/carbon/human , null, null, delmob, input["species"])
+		if("exault")
+			M.change_mob_type( /mob/living/carbon/human/exault , null, null, delmob, input["species"])
 		if("slime")
 			M.change_mob_type( /mob/living/carbon/slime , null, null, delmob )
 		if("monkey")

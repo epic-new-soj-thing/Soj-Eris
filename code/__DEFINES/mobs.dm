@@ -206,11 +206,29 @@
 
 #define HEAT_MOBIGNITE_THRESHOLD 530 //minimum amount of heat an object needs to ignite a mob when it hits the mob
 
-#define SPECIES_HUMAN			"Human"
 #define SPECIES_SLIME			"Slime"
 #define SPECIES_MONKEY			"Monkey"
 #define SPECIES_GOLEM			"Golem"
 #define SPECIES_SKELETON        "Skeleton"
+
+// Playable species
+#define SPECIES_HUMAN			"Human"
+#define SPECIES_EXALT_HUMAN		"Exalt Human"
+#define SPECIES_NARAMAD			"Naramad"
+#define SPECIES_SLIME			"Aulvae"
+#define SPECIES_SABLEKYNE		"Sablekyne"
+#define SPECIES_MARQUA			"Mar'Qua"
+#define SPECIES_KRIOSAN  		"Kriosan"
+#define SPECIES_AKULA			"Akula"
+#define SPECIES_CHTMANT			"Cht'mant"
+#define SPECIES_CINDARITE		"Cindarite"
+#define SPECIES_OPIFEX			"Opifex"
+#define SPECIES_FBP				"Full Body Prosthetic"
+#define SPECIES_UNBRANDED		"Unbranded Full Body Prosthetic"
+//#define SPECIES_FOLKEN		"Folken"
+//#define SPECIES_MYCUS			"Mycus"
+//#define SPECIES_AXOLOTL		"Axolotl"
+#define SPECIES_VOX				"Vox"
 
 #define RANDOM_BLOOD_TYPE pick(4;"O-", 36;"O+", 3;"A-", 28;"A+", 1;"B-", 20;"B+", 1;"AB-", 5;"AB+")
 
