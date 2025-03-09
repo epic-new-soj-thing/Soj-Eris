@@ -1,4 +1,14 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aW" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/floor/industrial/checker_large,
+/area/space)
+"bw" = (
+/obj/structure/lattice,
+/turf/open,
+/area/space)
 "cq" = (
 /obj/effect/floor_decal/floordetail/edgedrain,
 /obj/effect/floor_decal/steeldecal/steel_decals9{
@@ -18,6 +28,20 @@
 	},
 /turf/floor/tiled/steel/techfloor_grid,
 /area/space)
+"dc" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open,
+/area/space)
+"dr" = (
+/obj/structure/lattice,
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open,
+/area/space)
 "dT" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -28,6 +52,13 @@
 /obj/effect/floor_decal/industrial_plant,
 /obj/machinery/door/airlock/glass_security,
 /turf/floor/tiled/white/gray_perforated,
+/area/space)
+"eF" = (
+/obj/structure/railing{
+	dir = 4;
+	tag = "icon-railing0 (EAST)"
+	},
+/turf/open,
 /area/space)
 "eJ" = (
 /obj/item/stool,
@@ -53,9 +84,15 @@
 /obj/effect/floor_decal/industrial_plant,
 /turf/floor/industrial,
 /area/space)
+"gx" = (
+/turf/wall/low/with_glass/smart,
+/area/space)
 "gJ" = (
 /obj/effect/floor_decal/industrial_plant/border,
 /turf/floor/exoplanet/concrete,
+/area/space)
+"gL" = (
+/turf/floor/industrial/checker_large,
 /area/space)
 "hs" = (
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -104,6 +141,20 @@
 	},
 /turf/floor/tiled/white/techfloor_grid,
 /area/space)
+"iB" = (
+/obj/structure/railing,
+/turf/open,
+/area/space)
+"iD" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/paper_bin,
+/obj/item/pen,
+/turf/floor/industrial/checker_large,
+/area/space)
+"iI" = (
+/obj/machinery/door/airlock/maintenance_common,
+/turf/floor/industrial/checker_large,
+/area/space)
 "jt" = (
 /obj/structure/window/reinforced,
 /obj/structure/table/rack,
@@ -147,9 +198,18 @@
 /obj/structure/table/steel,
 /turf/floor/industrial/blue_slates_long_fixed,
 /area/space)
+"lT" = (
+/obj/structure/filingcabinet/chestdrawer,
+/turf/floor/industrial/checker_large,
+/area/space)
 "mh" = (
 /obj/structure/catwalk,
 /turf/floor/exoplanet/snow/random,
+/area/space)
+"mm" = (
+/obj/structure/multiz/ladder/up,
+/obj/effect/floor_decal/industrial_plant,
+/turf/floor/tiled/steel/techfloor_grid,
 /area/space)
 "nj" = (
 /obj/structure/window/reinforced{
@@ -205,6 +265,16 @@
 "qx" = (
 /turf/floor/exoplanet/concrete,
 /area/space)
+"rl" = (
+/obj/effect/floor_decal/industrial_plant/border_corner,
+/turf/floor/tiled/steel/techfloor,
+/area/space)
+"rm" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open,
+/area/space)
 "sr" = (
 /obj/effect/floor_decal/industrial_plant/border,
 /obj/effect/floor_decal/industrial/warning/dust/corner{
@@ -235,6 +305,13 @@
 	},
 /turf/floor/plating/under,
 /area/space)
+"tz" = (
+/obj/item/modular_computer/console/preset/civilian{
+	dir = 8
+	},
+/obj/structure/table/steel_reinforced,
+/turf/floor/industrial/checker_large,
+/area/space)
 "um" = (
 /obj/machinery/door/firedoor/multi_tile{
 	dir = 2
@@ -263,6 +340,11 @@
 "vH" = (
 /obj/machinery/door/airlock/highsecurity,
 /turf/floor/industrial/navy_large_slates,
+/area/space)
+"wk" = (
+/obj/structure/catwalk,
+/obj/structure/lattice,
+/turf/open,
 /area/space)
 "xj" = (
 /obj/structure/table/steel_reinforced,
@@ -296,6 +378,16 @@
 /area/space)
 "yy" = (
 /turf/floor/exoplanet/snow/random,
+/area/space)
+"zk" = (
+/obj/effect/floor_decal/industrial_plant,
+/turf/floor/tiled/steel/techfloor,
+/area/space)
+"zE" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open,
 /area/space)
 "zQ" = (
 /turf/floor/industrial/navy_slates_fixed,
@@ -338,6 +430,11 @@
 /obj/item/modular_computer/console/preset/security/camera,
 /turf/floor/industrial/blue_slates,
 /area/space)
+"Ca" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/turf/open,
+/area/space)
 "Ci" = (
 /obj/effect/floor_decal/industrial_plant/steel_grate_warning,
 /obj/effect/floor_decal/industrial/warning/dust,
@@ -354,6 +451,12 @@
 	dir = 4
 	},
 /turf/floor/exoplanet/snow/random,
+/area/space)
+"CY" = (
+/obj/effect/floor_decal/industrial_plant/border_corner{
+	dir = 4
+	},
+/turf/floor/tiled/steel/techfloor,
 /area/space)
 "Da" = (
 /turf/impassable_rock,
@@ -378,10 +481,24 @@
 /obj/effect/floor_decal/industrial/road/warning4,
 /turf/floor/exoplanet/concrete,
 /area/space)
+"Ge" = (
+/obj/effect/floor_decal/industrial_plant/border_corner{
+	dir = 1
+	},
+/turf/floor/tiled/steel/techfloor,
+/area/space)
 "Gh" = (
 /obj/machinery/door/firedoor/multi_tile,
 /obj/effect/floor_decal/industrial_plant/steel_grate_border,
 /turf/floor/tiled/steel/techfloor_grid,
+/area/space)
+"Hd" = (
+/obj/structure/bed/chair/office/light,
+/turf/floor/industrial/checker_large,
+/area/space)
+"Hi" = (
+/obj/structure/lattice,
+/turf/wall/reinforced,
 /area/space)
 "Hn" = (
 /turf/wall/low,
@@ -407,6 +524,20 @@
 /obj/machinery/door/airlock/glass_security,
 /turf/floor/plating/under,
 /area/space)
+"HV" = (
+/obj/structure/multiz/ladder,
+/obj/effect/floor_decal/industrial_plant/border{
+	dir = 8
+	},
+/turf/floor/tiled/steel/techfloor,
+/area/space)
+"IT" = (
+/obj/structure/lattice,
+/obj/structure/catwalk{
+	icon_state = "catwalk-broken"
+	},
+/turf/open,
+/area/space)
 "Ka" = (
 /obj/structure/table/rack/shelf,
 /turf/floor/industrial/blue_slates_long_fixed,
@@ -424,6 +555,19 @@
 	},
 /turf/floor/exoplanet/concrete,
 /area/space)
+"Kz" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/device/lighting/toggleable/lamp,
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/floor/industrial/checker_large,
+/area/space)
+"KG" = (
+/obj/structure/table/rack/shelf,
+/obj/effect/floor_decal/industrial_plant/steel_grate,
+/turf/floor/tiled/steel/techfloor,
+/area/space)
 "Lc" = (
 /obj/effect/floor_decal/industrial_plant/steel_grate_border,
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
@@ -433,6 +577,12 @@
 	dir = 1
 	},
 /turf/floor/tiled/white/techfloor_grid,
+/area/space)
+"Lh" = (
+/obj/effect/floor_decal/industrial_plant/border_corner{
+	dir = 8
+	},
+/turf/floor/tiled/steel/techfloor,
 /area/space)
 "LB" = (
 /obj/effect/floor_decal/industrial_plant/steel_grate_border,
@@ -498,6 +648,12 @@
 	},
 /turf/floor/industrial/blue_slates,
 /area/space)
+"ON" = (
+/obj/effect/floor_decal/industrial_plant/border{
+	dir = 4
+	},
+/turf/floor/tiled/steel/techfloor,
+/area/space)
 "OY" = (
 /obj/effect/floor_decal/industrial_plant/steel_grate_warning,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -529,6 +685,10 @@
 /obj/effect/floor_decal/industrial_plant,
 /turf/floor/tiled/white/techfloor,
 /area/space)
+"RD" = (
+/obj/structure/table/steel_reinforced,
+/turf/floor/industrial/checker_large,
+/area/space)
 "RU" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 1
@@ -538,6 +698,15 @@
 "RX" = (
 /obj/item/stool,
 /turf/floor/industrial/navy_slates_fixed,
+/area/space)
+"RZ" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open,
 /area/space)
 "Sb" = (
 /obj/machinery/button/toggle/door{
@@ -584,6 +753,11 @@
 	dir = 4
 	},
 /turf/floor/exoplanet/concrete,
+/area/space)
+"UY" = (
+/obj/structure/lattice,
+/obj/structure/railing,
+/turf/open,
 /area/space)
 "Vh" = (
 /obj/structure/bed/chair/wood,
@@ -677,6 +851,12 @@
 	dir = 1
 	},
 /turf/floor/industrial/blue_slates,
+/area/space)
+"YZ" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open,
 /area/space)
 "Zt" = (
 /obj/machinery/light{
@@ -94931,11 +95111,11 @@ qx
 qx
 qx
 qx
-SG
-SG
 qx
 qx
-SG
+qx
+qx
+qx
 SG
 yy
 yy
@@ -95133,7 +95313,7 @@ qx
 qx
 qx
 qx
-SG
+qx
 qx
 qx
 qx
@@ -95335,7 +95515,7 @@ qx
 qx
 qx
 qx
-SG
+qx
 qx
 qx
 qx
@@ -95942,7 +96122,7 @@ qx
 qx
 qx
 SG
-qx
+mm
 qx
 qx
 qx
@@ -133705,23 +133885,23 @@ YL
 YL
 YL
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+Hi
+Hi
+SG
 YL
 YL
 YL
@@ -133907,23 +134087,23 @@ YL
 YL
 YL
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+SG
+KG
+zk
+KG
+zk
+KG
+SG
+wk
+wk
+wk
+wk
+IT
+Ca
+wk
+Ca
+Ca
+SG
 YL
 YL
 YL
@@ -134109,23 +134289,23 @@ YL
 YL
 YL
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+SG
+KG
+zk
+KG
+zk
+KG
+gx
+wk
+wk
+IT
+wk
+bw
+wk
+wk
+IT
+Ca
+SG
 YL
 YL
 YL
@@ -134311,23 +134491,23 @@ YL
 YL
 YL
 YL
+SG
+KG
+zk
+KG
+zk
+KG
+gx
+wk
+wk
+RZ
+YZ
 YL
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+dc
+wk
+wk
+SG
 YL
 YL
 YL
@@ -134513,23 +134693,23 @@ YL
 YL
 YL
 YL
+SG
+aW
+gL
+aW
+gL
+Kz
+gx
+wk
+wk
+zE
 YL
 YL
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+iB
+wk
+wk
+SG
 YL
 YL
 YL
@@ -134715,23 +134895,23 @@ YL
 YL
 YL
 YL
+SG
+gL
+gL
+gL
+Hd
+RD
+gx
+wk
+wk
+zE
+YL
+bw
 YL
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+wk
+wk
+SG
 YL
 YL
 YL
@@ -134917,23 +135097,23 @@ YL
 YL
 YL
 YL
+SG
+gL
+gL
+lT
+tz
+iD
+SG
+wk
+wk
+zE
+YL
+bw
 YL
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+IT
+wk
+SG
 YL
 YL
 YL
@@ -135119,23 +135299,23 @@ YL
 YL
 YL
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+SG
+SG
+iI
+SG
+gx
+gx
+SG
+wk
+wk
+dr
+bw
+bw
+bw
+UY
+wk
+wk
+SG
 YL
 YL
 YL
@@ -135321,23 +135501,23 @@ YL
 YL
 YL
 YL
+SG
+wk
+wk
+wk
+wk
+wk
+wk
+wk
+wk
+zE
 YL
+bw
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+iB
+wk
+wk
+SG
 YL
 YL
 YL
@@ -135523,23 +135703,23 @@ YL
 YL
 YL
 YL
+SG
+wk
+IT
+bw
+wk
+wk
+wk
+wk
+IT
+zE
 YL
+bw
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+iB
+wk
+wk
+SG
 YL
 YL
 YL
@@ -135725,23 +135905,23 @@ YL
 YL
 YL
 YL
+SG
+YZ
 YL
 YL
 YL
+YZ
+dc
+wk
+wk
+zE
 YL
+bw
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+iB
+wk
+wk
+SG
 YL
 YL
 YL
@@ -135927,23 +136107,23 @@ YL
 YL
 YL
 YL
+SG
 YL
 YL
 YL
 YL
 YL
+iB
+wk
+bw
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+rm
+bw
+eF
+eF
+wk
+wk
+SG
 YL
 YL
 YL
@@ -136129,23 +136309,23 @@ YL
 YL
 YL
 YL
+SG
 YL
 YL
 YL
 YL
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+iB
+wk
+bw
+wk
+wk
+Ge
+ON
+CY
+wk
+wk
+SG
 YL
 YL
 YL
@@ -136331,23 +136511,23 @@ YL
 YL
 YL
 YL
+SG
 YL
 YL
 YL
 YL
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+iB
+wk
+wk
+wk
+wk
+rl
+HV
+Lh
+wk
+wk
+SG
 YL
 YL
 YL
@@ -136533,23 +136713,23 @@ YL
 YL
 YL
 YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
-YL
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
+SG
 YL
 YL
 YL
