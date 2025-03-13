@@ -1,6 +1,6 @@
-/datum/species/cindarite
-	name = SPECIES_CINDARITE
-	name_plural = "Cindarites"
+/datum/species/opifex
+	name = SPECIES_OPIFEX
+	name_plural = "Opifexi"
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/bite, /datum/unarmed_attack/punch)
 	//blurb = "" - TODO
 
@@ -26,7 +26,7 @@
 	spawn_flags = CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR | HAS_SKIN_COLOR
 
-	perks = list(PERK_RACIAL_CINDARITE)
+	perks = list(PERK_RACIAL_OPIFEX)
 
 	stat_modifiers = list(
 		STAT_TGH = 15,
@@ -34,4 +34,4 @@
         STAT_INT = -10)
 
 /datum/species/cindarite/get_bodytype()
-	return SPECIES_CINDARITE
+	return SPECIES_OPIFEX

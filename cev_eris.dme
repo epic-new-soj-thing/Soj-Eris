@@ -1967,6 +1967,8 @@
 #include "code\modules\mob\living\carbon\human\species\station\kriosan.dm"
 #include "code\modules\mob\living\carbon\human\species\station\marqua.dm"
 #include "code\modules\mob\living\carbon\human\species\station\monkey.dm"
+#include "code\modules\mob\living\carbon\human\species\station\naramad.dm"
+#include "code\modules\mob\living\carbon\human\species\station\opifex.dm"
 #include "code\modules\mob\living\carbon\human\species\station\sablekyne.dm"
 #include "code\modules\mob\living\carbon\human\species\station\skeleton.dm"
 #include "code\modules\mob\living\carbon\human\species\station\slime.dm"

@@ -29,7 +29,7 @@
 	heat_level_3 = 455 //Default 460
 
 	spawn_flags = CAN_JOIN
-	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
+	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_TONE | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR | HAS_SKIN_COLOR
 
 	perks = list(PERK_RACIAL_SABLEKYNE)
 
