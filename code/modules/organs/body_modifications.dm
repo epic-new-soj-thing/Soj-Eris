@@ -35,7 +35,7 @@ var/global/list/modifications_types = list(
 	var/list/body_parts = list(				// For sorting'n'selection optimization.
 		BP_CHEST, "chest2", BP_HEAD, BP_GROIN, BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG,\
 		OP_HEART, OP_LUNGS, OP_LIVER, BP_BRAIN, OP_EYES, OP_KIDNEY_LEFT, OP_KIDNEY_RIGHT, OP_STOMACH)
-	var/list/allowed_species = list(SPECIES_HUMAN)// Species restriction.
+	var/list/allowed_species = list(SPECIES_HUMAN, SPECIES_EXALT_HUMAN)// Species restriction.
 	var/replace_limb = null					// To draw usual limb or not.
 	var/mob_icon = ""
 	var/icon/icon = 'icons/mob/human_races/body_modification.dmi'

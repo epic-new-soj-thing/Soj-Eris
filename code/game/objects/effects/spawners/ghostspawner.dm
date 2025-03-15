@@ -151,16 +151,21 @@
 	var/facial_haircolor
 	var/skin_tone
 
+	var/list/ghost_role_perks = list()
+
+
 /obj/effect/mob_spawn/human/proc/add_stats(var/mob/living/carbon/human/target)
 	for(var/name in src.stat_modifiers)
 		target.stats.changeStat(name, stat_modifiers[name])
+	for(var/ghost_role_perks in src.ghost_role_perks)
+		target.stats.addPerk(ghost_role_perks)
 	return TRUE
 
 /obj/effect/mob_spawn/human/Initialize()
 	if(ispath(outfit))
-		outfit = outfit_by_type(outfit)
+		outfit = new outfit()
 	if(!outfit)
-		outfit = outfit_by_type()
+		outfit = new outfit
 	return ..()
 
 /obj/effect/mob_spawn/human/equip(mob/living/carbon/human/H)
@@ -169,6 +174,7 @@
 	if(outfit)
 		outfit.equip(H, title, alt_title)
 	add_stats(H)
+
 
 /obj/effect/mob_spawn/human/alive
 	icon = 'icons/obj/Cryogenic2.dmi'

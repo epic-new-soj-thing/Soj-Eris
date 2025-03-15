@@ -46,7 +46,14 @@
 
 	injury_type =  INJURY_TYPE_UNLIVING
 
+	perks = list(PERK_RACIAL_HUMAN)
+
 	has_process = list()
+
+	stat_modifiers = list(
+		STAT_BIO = 69,
+		STAT_COG = 20
+	)
 
 	has_limbs = list(
 		BP_CHEST =  new /datum/organ_description/chest/skeletal,
@@ -58,7 +65,7 @@
 		BP_R_LEG =  new /datum/organ_description/leg/right/skeletal
 		)
 
-	spawn_flags = IS_RESTRICTED
+	spawn_flags = CAN_JOIN
 
 /datum/species/skeleton/get_random_name()
 	return "skeletal remains"

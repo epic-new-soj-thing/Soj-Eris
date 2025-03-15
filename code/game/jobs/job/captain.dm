@@ -18,7 +18,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 	also_known_languages = list(LANGUAGE_CYRILLIC = 20, LANGUAGE_SERBIAN = 20)
 
-	perks = list(/datum/perk/sommelier)
+	perks = list(/datum/perk/sommelier, PERK_RACIAL_HUMAN)
 
 	ideal_character_age = 70 // Old geezer captains ftw
 	outfit_type = /decl/hierarchy/outfit/job/captain

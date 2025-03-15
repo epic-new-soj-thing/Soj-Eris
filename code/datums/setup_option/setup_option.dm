@@ -10,9 +10,10 @@
 	var/allowed_depts = 0
 	var/list/restricted_jobs = list() //job paths
 	var/list/allowed_jobs = list()
-	var/list/stat_modifiers = list()  //STAT = number
 	var/list/perks = list()           //perk paths
 	var/allow_modifications = TRUE
+	var/list/stat_modifiers = list()  //STAT = number
+
 
 /datum/category_item/setup_option/New()
 	. = ..()
