@@ -121,7 +121,7 @@ datum/preferences
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 	if(href_list["blood_reset"])
 		if(CanUseTopic(user))
-		    return TOPIC_REFRESH_UPDATE_PREVIEW
+			return TOPIC_REFRESH_UPDATE_PREVIEW
 	if(href_list["ears_type"])
 		var/valid_ears = cspecies.permitted_ears ? cspecies.permitted_ears : GLOB.ears_styles_list
 		var/new_e_style = input(user, "Choose your character's ears:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.ears_style)   as null|anything in (list("Default" = null) + valid_ears)
