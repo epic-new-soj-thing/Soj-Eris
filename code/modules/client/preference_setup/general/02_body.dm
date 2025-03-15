@@ -2,6 +2,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 /datum/preferences
 	var/species = SPECIES_HUMAN
+	var/species_form = FORM_HUMAN
 
 	var/b_type = "A+"					//blood type (not-chooseable)
 
@@ -23,6 +24,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	var/icon/bgstate = "black"
 	var/list/bgstate_options = list("steel", "dark_steel", "white_tiles", "black_tiles", "wood", "carpet", "white", "black")
 
+	var/size_multiplier = RESIZE_NORMAL
+	var/scale_effect = 0
+
+	var/grad_style = 	"None"			//Gradient style
+	var/grad_color =	"#000000"		//Gradient Color
+
 /datum/category_item/player_setup_item/physical/body
 	name = "Body"
 	sort_order = 2
@@ -30,22 +37,29 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 /datum/category_item/player_setup_item/physical/body/load_character(var/savefile/S)
 	from_file(S["species"], pref.species)
+	from_file(S["species_form"], pref.species_form)
 	from_file(S["skin_tone"], pref.s_tone)
 	from_file(S["skin_base"], pref.s_base)
 	from_file(S["hair_style_name"], pref.h_style)
 	from_file(S["facial_style_name"], pref.f_style)
 	from_file(S["b_type"], pref.b_type)
 	from_file(S["disabilities"], pref.disabilities)
-	pref.preview_icon = null
+	if (!pref.generating_preview)
+		pref.preview_icon = null
 	from_file(S["bgstate"], pref.bgstate)
 	from_file(S["eyes_color"], pref.eyes_color)
 	from_file(S["skin_color"], pref.skin_color)
 	from_file(S["hair_color"], pref.hair_color)
 	from_file(S["facial_color"], pref.facial_color)
+	from_file(S["size_multiplier"], pref.size_multiplier)
+	from_file(S["scale_effect"], pref.scale_effect)
+	from_file(S["gradient_style"], pref.grad_style)
+	from_file(S["gradient_color"], pref.grad_color)
 
 
 /datum/category_item/player_setup_item/physical/body/save_character(var/savefile/S)
 	to_file(S["species"], pref.species)
+	to_file(S["species_form"], pref.species_form)
 	to_file(S["skin_tone"], pref.s_tone)
 	to_file(S["skin_base"], pref.s_base)
 	to_file(S["hair_style_name"],pref.h_style)
@@ -57,18 +71,37 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	to_file(S["skin_color"], pref.skin_color)
 	to_file(S["hair_color"], pref.hair_color)
 	to_file(S["facial_color"], pref.facial_color)
+	to_file(S["size_multiplier"], pref.size_multiplier)
+	to_file(S["scale_effect"], pref.scale_effect)
+	to_file(S["gradient_style"], pref.grad_style)
+	to_file(S["gradient_color"], pref.grad_color)
 
 /datum/category_item/player_setup_item/physical/body/sanitize_character(var/savefile/S)
+	pref.b_type			= sanitize_text(pref.b_type, initial(pref.b_type))
 	pref.h_style		= sanitize_inlist(pref.h_style, GLOB.hair_styles_list, initial(pref.h_style))
 	pref.f_style		= sanitize_inlist(pref.f_style, GLOB.facial_hair_styles_list, initial(pref.f_style))
-	pref.b_type			= sanitize_text(pref.b_type, initial(pref.b_type))
+	pref.grad_style		= sanitize_inlist(pref.grad_style, hair_gradients_list, initial(pref.grad_style))
 	pref.hair_color		= iscolor(pref.hair_color) ? pref.hair_color : "#000000"
 	pref.facial_color	= iscolor(pref.facial_color) ? pref.facial_color : "#000000"
 	pref.skin_color		= iscolor(pref.skin_color) ? pref.skin_color : "#000000"
 	pref.eyes_color		= iscolor(pref.eyes_color) ? pref.eyes_color : "#000000"
+	pref.grad_color		= iscolor(pref.grad_color) ? pref.grad_color : "#000000"
+
+	if(pref.size_multiplier == null || pref.size_multiplier < RESIZE_TINY || pref.size_multiplier > RESIZE_HUGE)
+		pref.size_multiplier = initial(pref.size_multiplier)
+	if (pref.size_multiplier != 1)
+		pref.scale_effect = round(pref.size_multiplier * 100 - 100)		//So players don't have to rewrite their char sizes
+		pref.size_multiplier = initial(pref.size_multiplier)	//We don't need obsolete vars on our chars
 
 	if(!pref.species || !(pref.species in playable_species))
 		pref.species = SPECIES_HUMAN
+
+	var/datum/species/cspecies = global.all_species[pref.species]
+	var/datum/species_form/cform = GLOB.all_species_form_list[pref.species_form]
+	if(!pref.species_form || !(pref.species_form in GLOB.playable_species_form_list) || (cspecies.obligate_form && cspecies.default_form != cform.name) )
+		pref.species_form = cspecies.default_form
+		if(!pref.species_form)
+			pref.species_form = FORM_HUMAN
 
 	sanitize_integer(pref.s_tone, -185, 34, initial(pref.s_tone))
 

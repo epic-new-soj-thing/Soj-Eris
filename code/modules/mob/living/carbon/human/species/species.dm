@@ -8,6 +8,9 @@
 	var/name                                             // Species name.
 	var/name_plural                                      // Pluralized name (since "[name]s" is not always valid)
 	var/blurb = "A completely nondescript species."      // A brief lore summary for use in the chargen screen.
+	var/default_form = FORM_HUMAN	//If nothing else sets it, what do we look like.
+	var/obligate_form = FALSE		//If true, character creation will force the use of either this form or its subforms.
+	var/obligate_name = TRUE		//If true, forces the character's species name and name color to conform.
 
 	// Icon/appearance vars.
 	var/icobase = 'icons/mob/human_races/r_human.dmi'    // Normal icon set.

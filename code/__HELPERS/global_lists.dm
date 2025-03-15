@@ -102,9 +102,18 @@ GLOBAL_LIST_EMPTY(all_rituals)//List of all rituals
 GLOBAL_LIST_EMPTY(global_ritual_cooldowns) // internal lists. Use ritual's cooldown_category
 
 //Preferences stuff
+	//Body Sprites
+GLOBAL_LIST_EMPTY(all_species_form_list)
+GLOBAL_LIST_EMPTY(playable_species_form_list)
+GLOBAL_LIST_EMPTY(selectable_species_form_list)
 	//Hairstyles
 GLOBAL_LIST_EMPTY(hair_styles_list)        //stores /datum/sprite_accessory/hair indexed by name
 GLOBAL_LIST_EMPTY(facial_hair_styles_list) //stores /datum/sprite_accessory/facial_hair indexed by name
+	//Body Adornments
+GLOBAL_LIST_EMPTY(ears_styles_list)
+GLOBAL_LIST_EMPTY(tail_styles_list)
+GLOBAL_LIST_EMPTY(wings_styles_list)
+GLOBAL_LIST_EMPTY(body_marking_list)
 
 //Cooking
 //A dictionary of unique step ids that point to other step IDs that should be EXCLUDED if it is present in a recipe_pointer's list of possible steps.
@@ -163,6 +172,21 @@ var/global/list/unworn_slots = list(slot_l_hand,slot_r_hand, slot_l_store, slot_
 
 //Names that shouldn't trigger notifications about low health
 GLOBAL_LIST_EMPTY(ignore_health_alerts_from)
+
+var/global/list/hair_gradients_list = list(
+	"None" = "none",
+	"Fade (Up)" = "fadeup",
+	"Fade (Down)" = "fadedown",
+	"Fade Low (Up)" = "fadeup_low",
+	"Bottom Flat" = "bottomflat",
+	"Fade Low (Down)" = "fadedown_low",
+	"Vertical Split" = "vsplit",
+	"Reflected" = "reflected",
+	"Reflected (Inverted)" = "reflected_inverse",
+	"Reflected High" = "reflected_high",
+	"Reflected High (Inverted)" = "reflected_inverse_high",
+	"Wavy" = "wavy"
+	)
 
 //////////////////////////
 /////Initial Building/////
@@ -262,6 +286,30 @@ GLOBAL_LIST_EMPTY(ignore_health_alerts_from)
 			playable_species += S.name
 		if(S.spawn_flags & IS_WHITELISTED)
 			whitelisted_species += S.name
+
+	//Forms
+	var/fkey = 0
+	paths = typesof(/datum/species_form)-/datum/species_form
+	for(var/path in paths)
+		fkey++
+		var/datum/species_form/F = new path
+		F.form_key = fkey //Used in mob icon caching. The one a segment above is obsoleted by this.
+		GLOB.all_species_form_list[F.name] = F
+		if(F.playable)
+			GLOB.playable_species_form_list[F.name] = F
+			if(!F.variantof || F.variantof == F.name)
+				GLOB.selectable_species_form_list[F.name] = F
+
+	//Form Variants System
+	for(var/formname in GLOB.playable_species_form_list)
+		var/datum/species_form/F = GLOB.all_species_form_list[formname]
+		if(F.variantof && (F.variantof != F.name))
+			var/datum/species_form/P = GLOB.all_species_form_list[F.variantof]
+			if(P)
+				LAZYINITLIST(P.variants)
+				if(!P.variants.len)
+					P.variants[P.name] = P
+				P.variants[F.name] = F
 
 	//Posters
 	paths = subtypesof(/datum/poster) - /datum/poster/wanted - /datum/poster/asters
